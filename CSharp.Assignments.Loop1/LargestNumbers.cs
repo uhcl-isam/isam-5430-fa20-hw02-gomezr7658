@@ -1,4 +1,7 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430    Roberto Gomez
+
+using System;
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
