@@ -1,4 +1,7 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430   Roberto Gomez
+
+using System;
 using static System.Console;
 namespace CSharp.Assignments.Loop1
 {
@@ -25,8 +28,46 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // read in account number
-            // Enter your sentinel loop here
+           // Declare variables
+           int account;
+           int charges;
+           int credits;
+           int creditLimit;
+           int balance;
+
+           // read in account number
+           Console.Write("Enter the account number or -1 to quit: ");
+           account = Convert.ToInt32(Console.ReadLine());
+
+           // Enter your sentinel loop here
+           while (account != -1)
+           {
+              Console.WriteLine("Enter initial balance: ");
+              balance = Convert.ToInt32(Console.ReadLine());
+
+              Console.WriteLine("Enter the monthly charges:  ");
+              charges = Convert.ToInt32(Console.ReadLine());
+
+              Console.WriteLine("Enter the monthly credits:  ");
+              credits = Convert.ToInt32(Console.ReadLine());
+
+              Console.WriteLine("Enter the credit limit:  ");
+              creditLimit = Convert.ToInt32((Console.ReadLine()));
+
+              balance = balance + charges - credits;
+              Console.WriteLine($"The new balance is {balance}");
+
+              if (balance > creditLimit)
+              {
+                 Console.WriteLine("Credit limit exceeded");
+              }
+
+              Console.Write("Enter the account number or -1 to quit: ");
+              account = Convert.ToInt32(Console.ReadLine());
+
+
+
+         }
         }
     }
 }
