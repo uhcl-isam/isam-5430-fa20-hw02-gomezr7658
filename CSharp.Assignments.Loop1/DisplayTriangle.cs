@@ -1,5 +1,9 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430   Roberto Gomez
+
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace CSharp.Assignments.Loop1
@@ -29,8 +33,63 @@ namespace CSharp.Assignments.Loop1
             Console.Error.WriteLine("Enter the number of lines.");
             int n = Convert.ToInt32(Console.ReadLine());
 
-            // Write your codes here.
-            Console.ReadLine();
+         // Write your codes here.
+
+         switch (t)
+         {
+            case 'a':
+               for (int i = 0; i < n; i++)
+               {
+                  for (int j = 0; j < (i + 1); j++)
+                  {
+                     Console.Write("*");
+                  }
+                  Console.WriteLine("");
+               }
+               break;
+            case 'b':
+               for (int i = 0; i < n; i++)
+               {
+                  for (int j = (n - i); j > 0; j--)
+                  {
+                     Console.Write("*");
+                  }
+
+                  Console.WriteLine("");
+               }
+               break;
+            case 'c':
+               for (int i = 0; i < n; i++)
+               {
+                  for (int k = 0; k < i; k++)
+                  {
+                     Console.Write(" ");
+                  }
+                  for (int j = (n - i); j > 0; j--)
+                  {
+                     Console.Write("*");
+                  }
+                  Console.WriteLine("");
+               }
+               break;
+            case 'd':
+               for (int i = 1; i <= n; i++)
+               {
+                  for (int k = (n - i); k > 0; k--)
+                  {
+                     Console.Write(" ");
+                  }
+                  for (int j = 0; j < i; j++)
+                  {
+                     Console.Write("*");
+                  }
+                  Console.WriteLine("");
+               }
+               break;
+            default:
+               break;
+         }
+         Console.ReadLine();
         }
     }
 }
