@@ -1,4 +1,7 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430   Roberto Gomez
+
+using System;
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -17,8 +20,45 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // enter sentinel inputs
-            // then check the palindrome only once.
+            // Declare variables
+            int number = 0;
+            int num1, num2, num3, num4, num5, num6, num7, num8, num9;
+
+            // Enter the number
+            Console.Write("Enter a number (9 digits only) :  ");
+            number = Convert.ToInt32(Console.ReadLine());
+
+            // Separate all the digits
+            num1 = number / 100000000;
+            num2 = (number % 100000000) / 10000000;
+            num3 = (number % 10000000) / 1000000;
+            num4 = (number % 1000000) / 100000;
+            num5 = (number % 100000) / 10000;          
+            num6 = (number % 10000) / 1000;
+            num7 = (number % 1000) / 100;
+            num8 = (number % 100) / 10;
+            num9 = number % 10;
+            
+            // Check if the number is palindrome
+            if (num1 == num9)
+            {
+               if (num2 == num8)
+               {
+                  if (num3 == num7)
+                  {
+                     if (num4 == num6)
+                     {
+                        Console.WriteLine($"The number {number}  IS a palindrome");
+                     }
+                     else
+                     {
+                        Console.WriteLine($"The number {number} IS NOT a palindrome");
+                     }
+                  }
+               }
+            }
+
+
         }
     }
 }
