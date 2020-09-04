@@ -22,8 +22,46 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // prompt user for non-negative miles and obtain the input from user
-            // codes go here.
-        }
+           // initialize variables in declarations
+           int totalMiles = 0;
+           int totalGallons = 0;
+           int tankCounter = 1;
+           Boolean anotherOne = true;
+
+           // process information until user enter -1
+           while (anotherOne)
+           {
+              // prompt user for input and obtain value for each tank
+              Console.Write($"Enter the number of miles for tank {tankCounter} :  ");
+              int miles = int.Parse(Console.ReadLine());
+              totalMiles += miles;
+              Console.Write($"Enter the number of gallons for tank {tankCounter} :  ");
+              int gallons = int.Parse(Console.ReadLine());
+              totalGallons += gallons;
+              int mpg = miles / gallons;
+              Console.WriteLine($"The miles per gallon on this tanks is {mpg:f}");
+
+
+              Console.Write("Enter the miles for another tank of -1 to finish :  ");
+              string answer = Console.ReadLine();
+              anotherOne = answer != "-1";
+              tankCounter++;
+           }
+
+           // termination phase
+           // if the user entered at least one tank info..
+           if (tankCounter != 0)
+           {
+              // use number with decimal point to calculate average of grades
+              double average = (double)totalMiles / totalGallons;
+
+              // display the total and average (with two digits of precision)
+              Console.WriteLine($"The total miles are : {totalMiles:f}");
+              Console.WriteLine($"The total gallons are : {totalGallons:f}");
+
+
+              Console.WriteLine($"MPG is {average:f}");
+           }
+      }
     }
 }
