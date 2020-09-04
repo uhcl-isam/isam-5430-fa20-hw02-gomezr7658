@@ -1,4 +1,7 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430  Roberto Gomez
+
+using System;
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -23,14 +26,35 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class CheckerboardPattern
     {
-        public static void Main()
-        {
-            Console.Write("Enter the number of rows: ");
-            int num = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the fill character: ");
-            char fillChar = Char.Parse(Console.ReadLine());
+       public static void Main()
+       {
+          // Write your codes here.
+          Console.Write("Enter the number of rows:  ");
+          int num = int.Parse(Console.ReadLine());
+          Console.Write("Enter the fill character:  ");
+          char fillChar = Char.Parse(Console.ReadLine());
 
-            // Write your codes here.
-        }
+          int row = 1;
+          while (row <= num)
+          {
+             int column = 1;
+
+             if (row % 2 == 0)
+             {
+                Console.Write(" ");
+             }
+
+             while (column <= num)
+             {
+                Console.Write(fillChar); 
+                Console.Write(" ");
+                ++column;
+             }
+
+             Console.WriteLine();
+             ++row;
+          }
+
+      }
     }
 }
