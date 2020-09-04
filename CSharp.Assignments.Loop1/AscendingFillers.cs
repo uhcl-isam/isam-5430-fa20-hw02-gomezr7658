@@ -1,8 +1,12 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430   Roberto Gomez
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace CSharp.Assignments.Loop1
 {
@@ -16,7 +20,25 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // Complete your loop codes here.
-        }
+           // Declare variables
+           int total = 0;
+
+
+           Console.WriteLine("Enter a positive integer: ");
+           Console.WriteLine("Type CTRL-Z and press enter to finish input");
+
+           string input = Console.ReadLine();
+
+
+           while (input != null)
+           {
+              int number = int.Parse(input);
+              total += number;
+              input = Console.ReadLine();
+
+           }
+
+           Console.WriteLine($"Total : {total}");
+      }
     }
 }
