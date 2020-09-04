@@ -1,4 +1,7 @@
-﻿using System;
+﻿// University of Houston Clear Lake
+// ISAM 5430 Roberto Gomez
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +16,33 @@ namespace CSharp.Assignments.Loop1
         /// </summary>
         public static void Main()
         {
-            // Write your codes here
+           // Write your codes here
+
+           Console.Write(" Enter a number : ");
+           int n = Convert.ToInt32(Console.ReadLine());
+
+           for (int i = 1; i <= n; i++)
+           {
+              for (int j = n; j > 0; j--)
+              {
+                 if (i == j)
+                 {
+                    Console.Write($"{i} ");
+                 }
+                 else if (i > j)
+                 {
+                    Console.Write($"{j} ");
+                 }
+                 else
+                 {
+                    Console.Write("0 ");
+                 }
+
+              }
+              Console.WriteLine();
+
+
+           }
         }
-    }
+   }
 }
