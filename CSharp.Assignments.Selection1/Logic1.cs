@@ -47,7 +47,9 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool More20(int num)
         {
-            throw new NotImplementedException();
+         int test1 = (num + 2) % 20;
+         return test1 <= 4;
+         throw new NotImplementedException();
         }
 
         /// <summary>
