@@ -1,4 +1,7 @@
-﻿using System;
+﻿// University of Housto Clear Lake
+// ISAM 
+
+using System;
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -17,11 +20,10 @@ namespace CSharp.Assignments.Loop1
 
            Console.Write("Enter the last number of Fibonacci Sequence of numbers :  ");
            int end = int.Parse(Console.ReadLine());
-
-           Console.WriteLine(current);
-
-           if (end > 0)
-           {
+           
+           if (end >= 0)
+            Console.WriteLine(current);
+         {
               //Console.WriteLine(nextNumber);
 
               while (nextNumber <= end)
@@ -34,7 +36,6 @@ namespace CSharp.Assignments.Loop1
 
               }
            }
-
 
         }
    }
