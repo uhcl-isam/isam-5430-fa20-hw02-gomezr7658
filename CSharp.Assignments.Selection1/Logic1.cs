@@ -57,7 +57,9 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool NearTen(int num)
         {
-            throw new NotImplementedException();
+         int test1 = (num + 2) % 10;
+         return test1 <= 4;
+         throw new NotImplementedException();
         }
 
         /// <summary>
