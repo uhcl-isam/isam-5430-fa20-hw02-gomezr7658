@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace CSharp.Assignments.Loop1
@@ -78,7 +79,9 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool SquirrelPlay(int temperature, bool isSummer)
         {
-            throw new NotImplementedException();
+         int top = isSummer ? 100 : 90;
+         return temperature >= 60 && temperature <= top;
+         throw new NotImplementedException();
         }
 
         /// <summary>
