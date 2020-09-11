@@ -1,5 +1,5 @@
 ﻿// University of Housto Clear Lake
-// ISAM 
+// ISAM 5430 Roberto Gomez
 
 using System;
 namespace CSharp.Assignments.Loop1
