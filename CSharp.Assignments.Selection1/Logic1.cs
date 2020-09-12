@@ -138,7 +138,7 @@ namespace CSharp.Assignments.Loop1
             }
             return false;
          }
-         return false;
+         return true;
             throw new NotImplementedException();
         }
 
