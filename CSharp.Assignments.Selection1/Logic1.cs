@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Text;
 
@@ -37,6 +38,11 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool Love6(int a, int b)
         {
+            if ((a+b == 6) || a == 6 || b == 6 || a-b == 6 || b-a == 6)
+         {
+            return true;
+         }
+         return false;
             throw new NotImplementedException();
         }
 
@@ -48,7 +54,7 @@ namespace CSharp.Assignments.Loop1
         public static bool More20(int num)
         {
          int test1 = (num + 2) % 20;
-         return test1 <= 4;
+         return test1 < 4;
          throw new NotImplementedException();
         }
 
