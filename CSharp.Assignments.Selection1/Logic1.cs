@@ -38,12 +38,8 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool Love6(int a, int b)
         {
-            if ((a+b == 6) || a == 6 || b == 6 || a-b == 6 || b-a == 6)
-         {
-            return true;
-         }
-         return false;
-            throw new NotImplementedException();
+         return (a + b == 6) || a == 6 || b == 6 || a - b == 6 || b - a == 6;
+         throw new NotImplementedException();
         }
 
         /// <summary>
