@@ -117,6 +117,19 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
+         if (isAsleep)
+         {
+            return false;
+         }
+         if (isMorning)
+         {
+            if (isMom)
+            {
+               return true;
+            }
+            return false;
+         }
+         return false;
             throw new NotImplementedException();
         }
 
