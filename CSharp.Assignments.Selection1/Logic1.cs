@@ -129,14 +129,36 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
-         string alarm;
-         if (vacation)
-         {
-            //alarm = "10:00";
-         }
+           if (vacation) 
+           {
+              if (dayOfWeek == 0 || dayOfWeek == (DayOfWeek) 6)
+              {
+                 return "off";
+              }
 
-         // return alarm;
-            throw new NotImplementedException();
+              else
+              {
+                 return "10:00";
+              }
+
+
+           }
+           else 
+           {
+              if (dayOfWeek == 0 || dayOfWeek == (DayOfWeek) 6)
+              {
+                 return "10:00";
+              }
+
+              else
+              {
+                 return "7:00";
+              }
+
+           }
+
+           // return alarm;
+           throw new NotImplementedException();
         }
 
 
