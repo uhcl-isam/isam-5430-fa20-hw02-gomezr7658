@@ -29,9 +29,9 @@ namespace CSharp.Assignments.Loop1
        public static void Main()
        {
           // Write your codes here.
-          Console.Write("Enter the number of rows:  ");
+          Console.Error.Write("Enter the number of rows:  ");
           int num = int.Parse(Console.ReadLine());
-          Console.Write("Enter the fill character:  ");
+          Console.Error.Write("Enter the fill character:  ");
           char fillCharacter = Char.Parse(Console.ReadLine());
 
           int row = 1;
