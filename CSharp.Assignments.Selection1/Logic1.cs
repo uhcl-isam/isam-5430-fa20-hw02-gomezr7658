@@ -171,24 +171,18 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CloseFar(int a, int b, int c)
         {
-           Boolean bTrue = false;
-           Boolean cTrue = false;
-           if (b - 1 == 1)
-              bTrue = true;
-           if (c - 1 == 1)
-              cTrue = true;
-           
-           if (  bTrue || cTrue ) 
-           {
-              return false;
-           }
-           else
+           if (Math.Abs(a-b)<=1 && Math.Abs(a-c)>1  && Math.Abs(b-c) > 1)
            {
               return true;
            }
 
-           return true;
-              throw new NotImplementedException();
+           if (Math.Abs(a - c) <= 1 && Math.Abs(a - b) > 1 && Math.Abs(c-b)>1)
+           {
+              return true;
+           }
+
+           return false;
+           throw new NotImplementedException();
         }
     }
 }
