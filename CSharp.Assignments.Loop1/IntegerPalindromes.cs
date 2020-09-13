@@ -20,35 +20,55 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-           int num;
-           int sum = 0, t;
+           int digit1 = 0;
+           int digit2 = 0;
+           int digit3 = 0;
+           int digit4 = 0; 
+           int digit5 = 0;
+           int digit6 = 0; 
+           int digit7 = 0;
+           int digit8 = 0; 
+           int digit9 = 0;
+           string sol = null;
+
            Console.Error.Write("Enter a 9 digits number : ");
-           var input = Console.ReadLine();
+           var input = Convert.ToInt32(Console.ReadLine());
 
-           while (input != null && (input.Length < 9 || input.Length > 9))
+           if (input > 100000000 || input < 999999999)
            {
-              Console.Error.WriteLine("Please enter a 9 digits number");
-          
-              input = Console.ReadLine();
+              digit1 = input / 100000000;
+              digit2 = (input % 100000000) / 10000000;
+              digit3 = (input % 10000000) / 1000000;
+              digit4 = (input % 1000000) / 100000;
+              digit5 = (input % 100000) / 10000;
+              digit6 = (input % 10000) / 1000;
+              digit7 = (input % 1000) / 100;
+              digit8 = (input % 100) / 10;
+              digit9 = (input % 10);
+
            }
 
-           num = Convert.ToInt32(input);
-
-           for (t = num; num != 0; num /= 10)
+           if (digit1 == digit9)
            {
-              var r = num % 10;
-              sum = sum * 10 + r;
+              if (digit2 == digit8)
+              {
+                 if (digit3 == digit7)
+                 {
+                    if (digit4 == digit6)
+                    {
+                       sol = "palindrome";
+                    }
+                 }
+              }
            }
-
-           if (t == sum)
-            {
-            Console.WriteLine($"{num} is a palindrome");
-            }
            else
-            {
-            Console.WriteLine($"{num} is a palindrome");
-            }
-           //Console.WriteLine(t == sum ? $"{t} is a palindrome number" : $"{t} is not a palindrome");
+           {
+              sol = "not palindrome";
+           }
+
+           Console.WriteLine(sol);
+
+           
         }
     }
 }
