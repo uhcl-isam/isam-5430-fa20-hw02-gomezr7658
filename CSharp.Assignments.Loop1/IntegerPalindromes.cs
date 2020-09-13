@@ -22,25 +22,33 @@ namespace CSharp.Assignments.Loop1
         {
            int num;
            int sum = 0, t;
-           Console.Write("Enter a 9 digits number : ");
+           Console.Error.Write("Enter a 9 digits number : ");
            var input = Console.ReadLine();
 
            while (input != null && (input.Length < 9 || input.Length > 9))
            {
-              Console.WriteLine("Please enter a 9 digits number");
-              Console.Write("Enter a 9 digits number :");
+              Console.Error.WriteLine("Please enter a 9 digits number");
+          
               input = Console.ReadLine();
            }
 
            num = Convert.ToInt32(input);
 
-           for (t = num; num != 0; num = num / 10)
+           for (t = num; num != 0; num /= 10)
            {
               var r = num % 10;
               sum = sum * 10 + r;
            }
 
-           Console.WriteLine(t == sum ? $"{t} is a palindrome number" : $"{t} is not a palindrome");
+           if (t == sum)
+            {
+            Console.WriteLine($"{num} is a palindrome");
+            }
+           else
+            {
+            Console.WriteLine($"{num} is a palindrome");
+            }
+           //Console.WriteLine(t == sum ? $"{t} is a palindrome number" : $"{t} is not a palindrome");
         }
     }
 }

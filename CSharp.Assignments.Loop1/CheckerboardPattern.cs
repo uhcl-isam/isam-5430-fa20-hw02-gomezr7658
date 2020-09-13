@@ -32,7 +32,7 @@ namespace CSharp.Assignments.Loop1
           Console.Write("Enter the number of rows:  ");
           int num = int.Parse(Console.ReadLine());
           Console.Write("Enter the fill character:  ");
-          char fillChar = Char.Parse(Console.ReadLine());
+          char fillCharacter = Char.Parse(Console.ReadLine());
 
           int row = 1;
           while (row <= num)
@@ -46,7 +46,7 @@ namespace CSharp.Assignments.Loop1
 
              while (column <= num)
              {
-                Console.Write(fillChar); 
+                Console.Write(fillCharacter); 
                 Console.Write(" ");
                 ++column;
              }

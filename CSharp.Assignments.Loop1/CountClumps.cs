@@ -17,36 +17,41 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class CountClumps
     {
-        public static void Main()
-        {
-           int count = 0;
+       public static void Main()
+       {
+          int count = 0;
+          int num = 1;
+          string second = null;
 
-           // Write your codes here
-           Console.WriteLine("Enter the first integer");
-           Console.WriteLine("Type CTLR Z and press Enter to terminate input: ");
-           string first = Console.ReadLine();
+          // Write your codes here
+          Console.WriteLine("Enter the first integer");
+          Console.WriteLine("Type CTLR Z and press Enter to terminate input: ");
+          string first = Console.ReadLine();
 
-           Console.WriteLine("Enter the second integer");
-           Console.WriteLine("Type CTLR Z and press Enter to terminate input: ");
-           string next = Console.ReadLine();
+          Console.WriteLine("Enter the second integer");
+          Console.WriteLine("Type CTLR Z and press Enter to terminate input: ");
+          second = Console.ReadLine();
 
 
-           while (next != null)
-           {
-              if (first == next)
-              {
-                 count++;
-              }
-              else
-              {
-                 first = next;
-              }
-              Console.WriteLine("Enter next number: ");
-              next = Console.ReadLine();
-           }
+         while (first != null)
+          {
+             if (second == first && num == 1)
+             {
+                count++;
+                num++;
+             }
+             else
+             {
+                num = 1;
+             }
 
-           Console.WriteLine($"Count : {count}");
-
-        }
-   }
+             first = second;
+             
+             Console.WriteLine("Enter next integer");
+             Console.WriteLine("Type CTLR Z and press Enter to terminate input: ");
+             second = Console.ReadLine();
+          }
+          Console.WriteLine(count);
+       }
+    }
 }

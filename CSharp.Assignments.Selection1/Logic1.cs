@@ -58,8 +58,7 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool More20(int num)
         {
-         int test1 = (num + 2) % 20;
-         return test1 < 4;
+         return (num%20) == 1 || (num%20) ==2;
          throw new NotImplementedException();
         }
 
@@ -113,6 +112,13 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
+         string alarm;
+         if (vacation)
+         {
+            //alarm = "10:00";
+         }
+
+         // return alarm;
             throw new NotImplementedException();
         }
 
