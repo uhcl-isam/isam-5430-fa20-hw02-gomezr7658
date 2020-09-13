@@ -17,13 +17,13 @@ namespace CSharp.Assignments.Loop1
         public static bool CigarParty(int cigars, bool isWeekend)
         {
          if (cigars >= 40 && cigars <= 60)
-            {
+         {
             return true;
-            }
+         }
          if (isWeekend && cigars >= 40)
-            {
+         {
             return true;
-            }
+         }
          return false;
             throw new NotImplementedException();
         }
@@ -36,6 +36,23 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int CaughtSpeeding(int speed, bool birthday)
         {
+           if (birthday)
+           {
+              speed -= 5;
+           }
+
+           if (speed <= 60)
+           {
+              return 0;
+           }
+           else if (61 <= speed && speed <= 80)
+           {
+              return 1;
+           }
+           else
+           {
+              return 2;
+           }
             throw new NotImplementedException();
         }
 
