@@ -20,53 +20,36 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-           int digit1 = 0;
-           int digit2 = 0;
-           int digit3 = 0;
-           int digit4 = 0; 
-           int digit5 = 0;
-           int digit6 = 0; 
-           int digit7 = 0;
-           int digit8 = 0; 
-           int digit9 = 0;
-           string sol = null;
+
 
            Console.Error.Write("Enter a 9 digits number : ");
            var input = Convert.ToInt32(Console.ReadLine());
 
-           if (input > 100000000 || input < 999999999)
+           if (input >= 100000000 || input <= 999999999)
            {
-              digit1 = input / 100000000;
-              digit2 = (input % 100000000) / 10000000;
-              digit3 = (input % 10000000) / 1000000;
-              digit4 = (input % 1000000) / 100000;
-              digit5 = (input % 100000) / 10000;
-              digit6 = (input % 10000) / 1000;
-              digit7 = (input % 1000) / 100;
-              digit8 = (input % 100) / 10;
-              digit9 = (input % 10);
+              
+                 int lastInput = 0, left, firstInput;
 
-           }
+                 firstInput = input;
 
-           if (digit1 == digit9)
-           {
-              if (digit2 == digit8)
-              {
-                 if (digit3 == digit7)
+                 while (input != 0)
                  {
-                    if (digit4 == digit6)
-                    {
-                       sol = "palindrome";
-                    }
+                    left = input % 10;
+                    lastInput = lastInput * 10 + left;
+                    input /= 10;
                  }
-              }
+
+                 if (firstInput == lastInput)
+                    Console.WriteLine(firstInput + " is a palindrome.");
+                 else
+                    Console.WriteLine(firstInput + " is not a palindrome.");
+              
            }
            else
            {
-              sol = "not palindrome";
+              Console.WriteLine("Not a 9 digits number");
            }
 
-           Console.WriteLine(sol);
 
            
         }
