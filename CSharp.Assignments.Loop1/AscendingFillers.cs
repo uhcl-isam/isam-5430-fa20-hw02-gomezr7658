@@ -20,25 +20,31 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-           // Declare variables
-           int total = 0;
-
-
-           Console.WriteLine("Enter a positive integer: ");
-           Console.WriteLine("Type CTRL-Z and press enter to finish input");
-
+           Console.WriteLine("Enter a number");
            string input = Console.ReadLine();
+           int num = Convert.ToInt32(input);
+           int sumFillers = 0;
+           int newFiller = 0;
+           int startNumber = num;
 
 
-           while (input != null)
+
+           num = Convert.ToInt32(Console.ReadLine());
+
+           while (num >= 0 && input != null)
            {
-              int number = int.Parse(input);
-              total += number;
+
+              if (num == 0)
+              {
+                 startNumber = 0;
+              }
+
+              sumFillers = sumFillers + newFiller;
+              Console.Error.WriteLine("Enter a number");
               input = Console.ReadLine();
-
+              num = Convert.ToInt32(input);
            }
-
-           Console.WriteLine($"Total : {total}");
+           Console.WriteLine(sumFillers);
       }
     }
 }
